@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Myfirstlab</string>
+    <string name="volleyball_match">Volleyball Match</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="scoreteam1">Score</string>
+    <string name="scoreteam2">Score</string>
+    <string name="team1add1">+1</string>
+    <string name="team2add1">+1</string>
+    <string name="team1minus1">-1</string>
+    <string name="team2minus1">-1</string>
 </resources>
