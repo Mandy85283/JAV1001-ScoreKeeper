@@ -4,125 +4,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background_color"
     tools:context=".MainActivity">
-<!-- Creating textview to show heading  -->
+    <!-- Creating textview to show heading  -->
     <TextView
         android:id="@+id/volleyball"
-        android:layout_width="196dp"
+        android:layout_width="326dp"
         android:layout_height="43dp"
+        android:layout_marginTop="100dp"
         android:text="@string/volleyball_match"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="?attr/text_color"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
-    <!-- Creating textview to show team name A-->
+        app:layout_constraintTop_toTopOf="parent" />
+
+     <!-- Creating textview to show team name A-->
     <TextView
         android:id="@+id/Team1"
         android:layout_width="118dp"
         android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/team_a"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        android:textColor="?attr/text_color"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/countdown"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volleyball"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintTop_toBottomOf="@+id/volleyball" />
+
     <!-- Creating textview to show Team name B -->
     <TextView
         android:id="@+id/Team2"
         android:layout_width="118dp"
         android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="5dp"
         android:text="@string/team_b"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="?attr/text_color"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.663"
-        app:layout_constraintStart_toEndOf="@+id/Team1"
-        app:layout_constraintTop_toBottomOf="@+id/volleyball"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintStart_toEndOf="@+id/countdown"
+        app:layout_constraintTop_toBottomOf="@+id/volleyball" />
+
     <!-- Creating textview to show first team's score  -->
     <TextView
         android:id="@+id/Score1"
         android:layout_width="113dp"
         android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
         android:text="@string/scoreteam1"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        android:textColor="?attr/text_color"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/incscore1"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Team1"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintTop_toBottomOf="@+id/Team1" />
+
     <!-- Creating textview to show second team's score  -->
     <TextView
         android:id="@+id/Score2"
         android:layout_width="113dp"
         android:layout_height="60dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/scoreteam2"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="?attr/text_color"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/incscore2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintStart_toEndOf="@+id/Score1"
-        app:layout_constraintTop_toBottomOf="@+id/Team2"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintStart_toEndOf="@+id/start_pause"
+        app:layout_constraintTop_toBottomOf="@+id/Team2" />
+
     <!-- Creating button to increase the score of first team-->
     <Button
         android:id="@+id/incscore1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="155dp"
         android:text="@string/team1add1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/decscore1"
+        app:layout_constraintEnd_toStartOf="@+id/incscore2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Score1"
-        app:layout_constraintVertical_bias="0.13"
         tools:ignore="DuplicateSpeakableTextCheck" />
+
     <!-- Creating button to increase the score of second team-->
     <Button
         android:id="@+id/incscore2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
         android:text="@string/team2add1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/decscore2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toEndOf="@+id/incscore1"
-        app:layout_constraintTop_toBottomOf="@+id/Score2"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintTop_toBottomOf="@+id/Score2" />
+
     <!-- Creating button to decrease the score of first team-->
-    <Button
+   <Button
         android:id="@+id/decscore1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="196dp"
         android:text="@string/team1minus1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintEnd_toStartOf="@+id/decscore2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incscore1"
-        app:layout_constraintVertical_bias="0.134"
         tools:ignore="DuplicateSpeakableTextCheck" />
+
     <!-- Creating button to decrease the score of second team-->
     <Button
         android:id="@+id/decscore2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="196dp"
         android:text="@string/team2minus1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toEndOf="@+id/decscore1"
-        app:layout_constraintTop_toBottomOf="@+id/incscore2"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintTop_toBottomOf="@+id/incscore2" />
+
+    <!-- Creating SwitchCompat to Enable or Disable NIght Theme-->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:text="Dark Theme"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Creating TextView to Show the Timmer-->
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="131dp"
+        android:text="00:00"
+        android:textColor="?attr/text_color"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/start_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volleyball" />
+
+    <!-- Creating button to Start and Pause the Timmer-->
+    <Button
+        android:id="@+id/start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="162dp"
+        android:text="start"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countdown" />
+
+    <!-- Creating button to Reset the Timmer-->
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:text="reset"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/Score2"
+        app:layout_constraintStart_toEndOf="@+id/Score1"
+        app:layout_constraintTop_toBottomOf="@+id/start_pause"
+        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

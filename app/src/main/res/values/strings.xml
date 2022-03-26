@@ -9,4 +9,8 @@
     <string name="team2add1">+1</string>
     <string name="team1minus1">-1</string>
     <string name="team2minus1">-1</string>
+    <string-array name="Themes">
+        <item>Light mode</item>
+        <item>Night mode</item>
+    </string-array>
 </resources>
